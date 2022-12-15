@@ -12,7 +12,6 @@ body {
    --dark-green: #033738;
    --green-1: #B9F5D8;
    --green-2: #AAD2BA;
-   --green-3: #6B8F71;
    --white-text-color: whitesmoke;
 }
 
@@ -244,3 +243,19 @@ body {
 }
 
 /* Projects */
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card img {
+    height: 120px;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 1.25;
+    font-size: 0.9rem;
+}
