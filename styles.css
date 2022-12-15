@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+:root {
+   --dark-green: #033738;
+   --green-1: #B9F5D8;
+   --green-2: #AAD2BA;
+   --green-3: #6B8F71;
+   --white-text-color: whitesmoke;
+}
+
+.cv-container {
+    display: grid;
+    margin: 50px 80px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+/* Left section */
+
+.left-section {
+    grid-row: 1 / 3;
+    background: var(--dark-green);
+    padding: 30px;
+    color: var(--white-text-color);
+    border-radius: 20px 0 0 20px;
+}
+
+.left-section h6 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.left-section-title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--green-2);
+}
+
+.left-container {
+    margin-top: 50px;
+}
+
+.img-container {
+    display: grid;
+    place-items: center;
+    margin: 35px;
+}
+
+/* Contact info */
+
+.contact-info h6 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.contact-info span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 6px;
+    border: 2px solid var(--green-2);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.contact-info p a {
+    text-decoration: none;
+    color: var(--white-text-color);
+}
+
+.contact-info p a:hover {
+    color: var(--green-1);
+}
+
+/* Education */
+
+.edu-info {
+    margin: 30px auto;
+}
+
+.edu-info .subsection-title {
+    margin: 0 !important;
+}
+
+.subsection-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.edu-info .subsection-italic {
+    margin: 0 !important;
+}
+
+.subsection-italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Skills */
+
+.skills h6 {
+    margin-bottom: 25px;
+}
+
+.skill-set {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 2rem;
+}
+
+.skill-set p {
+    font-weight: 600;
+}
+
+.progress {
+    background: gray !important;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    background: var(--green-1) !important;
+}
+
+.skill-set::after {
+    line-height: 0;
+}
+
+/* Languages */
+.languages {
+    margin-top: 35px;
+}
+
+.languages h6 {
+    margin-bottom: 15px;
+}
+
+.language-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.language-info {
+    width: 100%;
+    padding: 30px 10px 20px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.language-info ul {
+    padding: 0;
+    list-style: none;
+}
+
+.language-info li {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+}
+
+/* Right top section */
+
+.right-top-section {
+    display: grid;
+    align-items: center;
+    padding-left: 30px;
+    background: var(--green-2);
+    border-top-right-radius: 20px;
+    color: var(--dark-green);
+}
+
+.name-font {
+    margin-top: 30px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+}
+
+.engineer-font {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-top: 0 !important;
+}
+
+/* Right bottom section */
+
+.right-bottom-section {
+    padding: 30px;
+    background: var(--white-text-color);
+    border-bottom-right-radius: 20px;
+    color: var(--dark-green);
+}
+
+.right-bottom-section h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.right-container {
+    margin-bottom: 30px;
+}
+
+/* Work experience */
+
+.card-container {
+    display: grid;
+    grid-template-columns: 0.5fr 10fr;
+    column-gap: 10px;
+    background: var(--green-2);
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.job-title .subsection-title {
+    margin: 0 !important;
+}
+
+.job-title .subsection-italic {
+    margin: 0 !important;
+}
+
+.job-responsibilities {
+    display: none;
+}
+
+.card-container.expanded .job-responsibilities {
+    grid-column: span 2;
+    display: block;
+    margin: 20px 10px 0 10px;
+}
+
+/* Projects */
