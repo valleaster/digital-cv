@@ -18,18 +18,50 @@ body {
 .cv-container {
     display: grid;
     margin: 50px 80px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 5fr;
+}
+
+/* Grid area */
+.img-container {
+    grid-area: A;
+}
+
+.contacts {
+    grid-area: B;
+}
+
+.education {
+    grid-area: C;
+}
+
+.skills {
+    grid-area: D;
+}
+
+.languages {
+    grid-area: E;
+}
+
+.title {
+    grid-area: F;
+}
+  
+.profile {
+    grid-area: G;
+}
+  
+.work-exp {
+    grid-area: H;
+}
+  
+.projects {
+    grid-area: I;
 }
 
 /* Left section */
 
 .left-section {
-    grid-row: 1 / 3;
-    background: var(--dark-green);
-    padding: 30px;
-    color: var(--white-text-color);
-    border-radius: 20px 0 0 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .left-section h6 {
@@ -42,29 +74,33 @@ body {
     border-bottom: 2px solid var(--green-2);
 }
 
-.left-container {
-    margin-top: 50px;
-}
-
 .img-container {
     display: grid;
     place-items: center;
-    margin: 35px;
+    padding: 80px 0 50px 0;
+    border-top-left-radius: 20px;
 }
 
 /* Contact info */
 
-.contact-info h6 {
+.contacts {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+.contacts h6 {
     margin-bottom: 20px;
 }
 
-.contact-info p {
+.contact-info {
     display: flex;
+    padding: 5px;
     align-items: center;
     line-height: 0;
+    margin-bottom: 5px;
 }
 
-.contact-info span {
+.contact-icon {
     font-size: 1.25rem;
     font-weight: 700;
     padding: 6px;
@@ -73,12 +109,11 @@ body {
     margin: 0 10px;
 }
 
-.contact-info p a {
+.detailed-info a {
     text-decoration: none;
-    color: var(--white-text-color);
 }
 
-.contact-info p a:hover {
+.contacts a:hover {
     color: var(--green-1);
 }
 
@@ -137,7 +172,7 @@ body {
 
 /* Languages */
 .languages {
-    margin-top: 35px;
+    border-bottom-left-radius: 20px;
 }
 
 .languages h6 {
@@ -175,10 +210,6 @@ body {
 .right-top-section {
     display: grid;
     align-items: center;
-    padding-left: 30px;
-    background: var(--green-2);
-    border-top-right-radius: 20px;
-    color: var(--dark-green);
 }
 
 .name-font {
@@ -199,17 +230,12 @@ body {
 .right-bottom-section {
     padding: 30px;
     background: var(--white-text-color);
-    border-bottom-right-radius: 20px;
     color: var(--dark-green);
 }
 
 .right-bottom-section h6 {
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-.right-container {
-    margin-bottom: 30px;
 }
 
 /* Work experience */
@@ -243,6 +269,10 @@ body {
 }
 
 /* Projects */
+.projects {
+    border-bottom-right-radius: 20px;
+}
+
 .card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -258,4 +288,103 @@ body {
     text-align: center;
     line-height: 1.25;
     font-size: 0.9rem;
+}
+
+@media (min-width: 1300px) {
+    .cv-container {
+        margin: 80px 18vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cv-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+          "A F"
+          "B G"
+          "C H"
+          "D H"
+          "E I";
+    }
+
+    .left-section {
+        background: var(--dark-green);
+        color: var(--white-text-color);
+    }
+
+    .detailed-info a {
+        color: var(--white-text-color);
+    }
+
+    .right-top-section {
+        padding-left: 30px;
+        background: var(--green-2);
+        border-top-right-radius: 20px;
+        color: var(--dark-green);
+    }
+}
+
+@media (max-width: 1024px) {
+    .cv-container {
+        grid-template-areas:
+            "A"
+            "F"
+            "B"
+            "G"
+            "C"
+            "H"
+            "I"
+            "D"
+            "E";
+    }
+
+    .img-container {
+        background: var(--dark-green);
+        margin: 0;
+        padding: 100px 50px 0 50px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .education,
+    .skills,
+    .languages {
+        padding: 30px;
+        background: var(--white-text-color);
+    }
+
+    .left-container {
+        margin-top: 0;
+    }
+
+    .contacts {
+        padding: 20px 30px 10px 30px;
+        background: var(--green-2);
+        color: var(--dark-green);
+        display: flex;
+        text-align: center;
+    }
+
+    .contacts h6 {
+        display: none;
+    }
+    
+    .contacts span {
+        border: 2px solid var(--dark-green);
+    }
+    
+    .detailed-info a {
+        color: var(--dark-green);
+    }
+    
+    .contacts p a:hover {
+        color: var(--white-text-color);
+    }
+
+    .right-top-section {
+        background: var(--dark-green);
+        color: var(--white-text-color);
+        text-align: center;
+        padding: 0 15px 30px 15px;
+    }
 }

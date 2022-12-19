@@ -11,14 +11,3 @@ cardContainers.forEach(cardContainer => {
   });
 });
 
-$(document).ready(function() {
-    // Initialize carousel
-    $("#myCarousel").carousel({
-      // Options go here
-    });
-  
-    // Set number of items to show
-    $("#myCarousel").carousel({
-      itemsPerPage: 3
-    });
-});
