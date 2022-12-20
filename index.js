@@ -11,3 +11,16 @@ cardContainers.forEach(cardContainer => {
   });
 });
 
+
+// Expand and collapse contact-info for lower screen size
+const contactInfos = document.querySelectorAll('.contact-info');
+
+contactInfos.forEach(contactInfo => {
+  contactInfo.addEventListener('click', e => {
+    const expandedcontactInfos = document.querySelectorAll('.contact-info.expanded');
+    expandedcontactInfos.forEach(expandedcontactInfo => {
+      expandedcontactInfo.classList.remove('expanded');
+    });
+    contactInfo.classList.toggle('expanded');
+  });
+});

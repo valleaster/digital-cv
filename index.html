@@ -106,12 +106,12 @@
         </div>
         <!-- ==================== Profile Section ==================== -->
         <div class="about right-bottom-section">
-            <h6>PROFILE</h6>
+            <h6 class="right-section-title">PROFILE</h6>
             <p>Motivated and dependable individual seeking employment as a software engineer with interest in frontend web development. Bringing forth a passion for personal development and a variety of powerful skills including HTML, CSS, Javascript, Bootstrap and SQLite. Strong organizational abilities with proven successes managing multiple projects within a tight deadline. Committed to utilizing my skills to further the mission of a company.</p>
         </div>
         <!-- ==================== Working Experience ==================== -->
         <div class="work-exp right-bottom-section">
-            <h6>WORK EXPERIENCE</h6>
+            <h6 class="right-section-title">WORK EXPERIENCE</h6>
             <div class="row">
                 <div class="col-12 gy-2">
                     <div class="card-container expanded">
@@ -168,63 +168,69 @@
         </div>
         <!-- ==================== Project Section ==================== -->
         <div class="projects right-bottom-section">
-            <h6>PROJECTS</h6>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <h6 class="right-section-title">PROJECTS</h6>
+            <!-- Carousel start -->
+            <div id="carouselExampleControls" class="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="card-wrapper">
-                        <div class="card">
-                          <img src="Images/1.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Tic-Tac-Toe game built using Javascript.</p>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <img src="Images/5.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Game of Black Jack created using HTML, CSS and Javascript.</p>
-                          </div>
-                        </div>
-                        <div class="card">
-                            <img src="Images/2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p class="card-text">Completed a grid testimonials challenge from Frontend Mentor.</p>
+                    <div class="carousel-item active">
+                        <div class="project-card-container">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/tictactoe.jpg" class="d-block w-100" alt="Tic Tac Toe"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Tic-Tac-Toe game built using Javascript.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/blackjack.jpg" class="d-block w-100" alt="Black Jack"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Game of Black Jack created using HTML, CSS and Javascript.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card-wrapper">
-                        <div class="card">
-                          <img src="Images/1.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">A number guessing game built using Javascript.</p>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <img src="Images/5.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Created an e-Commerce ERD and tables using knowledge of SQL.</p>
-                          </div>
-                        </div>
-                        <div class="card">
-                            <img src="Images/2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p class="card-text">Some quick example text to build on the card title.</p>
+                    <div class="carousel-item">
+                        <div class="project-card-container">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/numberguessinggame.jpg" class="d-block w-100" alt="Number Guessing Game"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">A simple number guessing game built using Javascript.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/gridlayout.jpg" class="d-block w-100" alt="Grid Layout"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Completed a grid testimonials challenge from Frontend Mentor.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
+                    <div class="carousel-item">
+                        <div class="project-card-container">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/sql.jpg" class="d-block w-100" alt="Database"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Performed Titanic Data Exploration using SQL queries to determine factors affecting survival rate.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="img-wrapper"><img src="Images/erd.jpg" class="d-block w-100" alt="Entity relationship diagram"> </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Designed an e-Commerce ERD and created database tables in SQLite.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
+            <!-- Carousel end -->
         </div> 
     </div>
     <script src="index.js"></script>
